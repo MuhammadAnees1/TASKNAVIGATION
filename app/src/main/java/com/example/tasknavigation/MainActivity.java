@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment = settingFragment;
                     break;
             }
+
             if (selectedFragment != null) {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragmentContainer, selectedFragment)
@@ -57,9 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return null;
         });
-    }
-     void setFragments(){
-
     }
     private void setFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction()
