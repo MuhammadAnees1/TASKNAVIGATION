@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottomNavigation=findViewById(R.id.bottomNavigation);
+        bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.show(1, true);
 
         homeFragment = new homeFragment();
@@ -28,15 +28,15 @@ public class MainActivity extends AppCompatActivity {
         setFragment(homeFragment);
 
         // add your bottom navigation icon here
-        bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.baseline_home_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.baseline_info_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.baseline_ios_share_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.baseline_settings_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.baseline_ios_share_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.baseline_settings_24));
 
         bottomNavigation.setOnClickMenuListener(model -> {
             Fragment selectedFragment = null;
 
-            switch(model.getId()) {
+            switch (model.getId()) {
                 case 1:
                     selectedFragment = homeFragment;
                     break;
@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
             }
             return null;
         });
+    }
+     void setFragments(){
+
     }
     private void setFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction()
